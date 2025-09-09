@@ -78,9 +78,13 @@ npm run dev
 ## 文档 / Documentation
 
 - [📋 需求规格说明 / Requirements Specification](./REQUIREMENTS.md)
-- [🏗️ 技术架构文档 / Technical Architecture](./docs/ARCHITECTURE.md) (待创建)
-- [🎨 设计指南 / Design Guidelines](./docs/DESIGN.md) (待创建)
-- [🔧 API文档 / API Documentation](./docs/API.md) (待创建)
+- [👥 用户故事和使用场景 / User Stories & Use Cases](./USER_STORIES.md)
+- [🏗️ 技术架构文档 / Technical Architecture](./docs/ARCHITECTURE.md)
+- [🗺️ 项目路线图 / Project Roadmap](./docs/ROADMAP.md)
+- [🔧 API文档 / API Documentation](./docs/API.md)
+- [📝 贡献指南 / Contributing Guidelines](./CONTRIBUTING.md)
+- [🔒 安全政策 / Security Policy](./SECURITY.md)
+- [📅 变更日志 / Changelog](./CHANGELOG.md)
 
 ## 贡献指南 / Contributing
 
