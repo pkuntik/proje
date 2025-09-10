@@ -1,0 +1,76 @@
+.tree-container {
+  /* A single node and its children container */
+  position: relative;
+  padding-top: 20px;
+}
+
+.tree-node-wrapper {
+  /* Wrapper for the node itself and its children */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree-children {
+  /* The container for all child branches */
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Spacing between sibling branches */
+}
+
+/* Base styling for connecting lines */
+.tree-container::before,
+.tree-container::after {
+  content: '';
+  position: absolute;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 0 0 2px 2px;
+}
+
+/* Vertical line coming down from a node */
+.tree-container > .tree-node-wrapper > .node::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 20px; /* The length of the line down from the node */
+  border-left: 2px solid #ccc;
+}
+
+/* Hide the downward line for leaf nodes */
+.tree-container > .tree-node-wrapper > .node:only-child::before {
+  display: none;
+}
+
+/* Horizontal line across the top of the children group */
+.tree-children::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 10%;
+  right: 10%;
+  border-top: 2px solid #ccc;
+}
+
+/* Hide line if there's only one child */
+.tree-children > .tree-container:only-child::before,
+.tree-children > .tree-container:only-child::after {
+  display: none;
+}
+
+/* Vertical line connecting each child to the horizontal bar */
+.tree-container > .tree-node-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    height: 20px;
+    border-left: 2px solid #ccc;
+}
+
+/* Don't draw line up from the root node */
+.app-container > .tree-container > .tree-node-wrapper::before {
+    display: none;
+}
